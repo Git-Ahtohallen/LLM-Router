@@ -23,7 +23,7 @@ Everything runs offline against a built-in mock provider, so no API keys are nee
 
 ## Roadmap
 
-- [ ] Core types and provider interface, mock provider
+- [x] Core types and provider interface, mock provider
 - [ ] Routing by task size
 - [ ] Response cache
 - [ ] Provider fallback
