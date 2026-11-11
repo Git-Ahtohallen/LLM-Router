@@ -31,3 +31,7 @@ Everything runs offline against a built-in mock provider, so no API keys are nee
 - [ ] Real providers (OpenAI, Anthropic)
 - [ ] Eval suite
 - [ ] CI
+
+## License
+
+[MIT](LICENSE)

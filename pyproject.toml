@@ -7,6 +7,8 @@ name = "llm-router"
 version = "0.1.0"
 description = "Route LLM requests by task size, cache repeats, fall back across providers, and track cost per request."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 dependencies = []
 
