@@ -12,14 +12,8 @@ import time
 from collections.abc import Callable
 
 from llm_router.providers.base import ModelPricing, ProviderError
+from llm_router.tokens import CHARS_PER_TOKEN, estimate_request_tokens, estimate_tokens
 from llm_router.types import CompletionRequest, CompletionResponse, Usage
-
-# Rough rule of thumb for English text; good enough for a mock and for routing.
-CHARS_PER_TOKEN = 4
-
-
-def estimate_tokens(text: str) -> int:
-    return max(1, len(text) // CHARS_PER_TOKEN)
 
 
 class MockProvider:
@@ -84,7 +78,7 @@ class MockProvider:
         text = text[:max_chars]
 
         usage = Usage(
-            input_tokens=sum(estimate_tokens(m.content) for m in request.messages),
+            input_tokens=estimate_request_tokens(request),
             output_tokens=estimate_tokens(text),
         )
         return CompletionResponse(

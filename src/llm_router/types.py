@@ -80,3 +80,5 @@ class CompletionResponse:
     latency_ms: float
     cost_usd: float = 0.0
     cached: bool = False
+    # Name of the routing rule that picked this provider; None when called directly.
+    route: str | None = None
