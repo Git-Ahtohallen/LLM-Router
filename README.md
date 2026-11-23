@@ -1,5 +1,7 @@
 # LLM-Router
 
+[![CI](https://github.com/Git-Ahtohallen/LLM-Router/actions/workflows/ci.yml/badge.svg)](https://github.com/Git-Ahtohallen/LLM-Router/actions/workflows/ci.yml)
+
 A small, production-minded router for LLM requests:
 
 - **Route by task size**: send short, simple tasks to a cheaper model and long or complex ones to a stronger model.
@@ -62,7 +64,7 @@ calling a provider.
 - [ ] Cost tracking and reporting
 - [ ] Real providers (OpenAI, Anthropic)
 - [ ] Eval suite
-- [ ] CI
+- [x] CI
 
 ## License
 
